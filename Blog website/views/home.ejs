@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Home</title>
+  <style>
+    /* Minimalist CSS Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Base Styles */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fafafa;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Layout */
+    header {
+      padding: 1.8rem 2rem;
+      border-bottom: 1px solid #eee;
+      background-color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 4rem;
+      padding: 0 1rem;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .section {
+      padding: 2rem;
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    }
+
+    /* Typography */
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      color: #222;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+      font-weight: 400;
+      color: #222;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: #555;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    /* Links */
+    a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-weight: 400;
+    }
+
+    a:hover {
+      color: #666;
+    }
+
+    nav a {
+      position: relative;
+      padding: 0.3rem 0;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #333;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Buttons */
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .btn {
+      padding: 0.9rem 1.8rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+    }
+
+    .btn:hover {
+      border-color: #999;
+      background-color: #f5f5f5;
+      transform: translateY(-1px);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .section {
+        padding: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/add-blog">Add Blog</a>
+      <a href="/show">View Blogs</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="intro">
+      <h1>Welcome to Our Blog</h1>
+      <p>A space for thoughtful writing and meaningful connections. Share your perspective with a community that values authentic expression.</p>
+      <div class="cta-buttons">
+        <a href="/add-blog" class="btn">Create a New Post</a>
+        <a href="/show" class="btn">Browse All Posts</a>
+      </div>
+    </div>
+
+    <div class="section-grid">
+      <div class="section">
+        <h2>Why Start Blogging?</h2>
+        <p>Blogging helps you express your thoughts, share your knowledge, build an audience, and even improve your writing skills.</p>
+        <p>Whether it's tech, travel, lifestyle, or personal stories — your voice matters.</p>
+      </div>
+
+      <div class="section">
+        <h2>Featured Topics</h2>
+        <p>Explore popular blogs on technology, motivation, daily life hacks, health tips, and more.</p>
+        <p>Our writers share unique content every day to keep you inspired.</p>
+      </div>
+
+      <div class="section">
+        <h2>How It Works</h2>
+        <p>Click "Create a New Post", write your content, and publish. It's that simple!</p>
+        <p>Your post will be instantly visible to the community.</p>
+      </div>
+
+      <div class="section">
+        <h2>Join Our Community</h2>
+        <p>Whether you're here to write or just read, you're welcome. Leave comments, connect with authors, and be part of something meaningful.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
